@@ -24,7 +24,7 @@ const salaryDetails = [
 ];
 
 for (let i = 0; i < salaryDetails.length; i++) {
-    console.log("Beste " + salaryDetails[i].name + ", je salaris van € " + salaryDetails[i].salary + ",- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.");
+    console.log(`Beste ${salaryDetails[i].name}, je salaris van € ${salaryDetails[i].salary},- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.`);
 }
 
 console.log("-----");
@@ -50,7 +50,8 @@ const vacationDays = [
 ];
 
 for (let i = 0; i < vacationDays.length; i++) {
-    console.log(vacationDays[i].name + " heeft nog " + (vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays) + " vakantiedagen over.")
+    let vacationDaysRemaining = vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays;
+    console.log(`${vacationDays[i].name} heeft nog ${vacationDaysRemaining} vakantiedagen over.`);
 }
 
 console.log("-----");
@@ -74,7 +75,7 @@ const employeesInTraining = [
 
 for (let i = 0; i < employeesInTraining.length; i++) {
     if (employeesInTraining[i].month === "Januari") {
-        console.log(employeesInTraining[i].name + ": " + employeesInTraining[i].training);
+        console.log(`${employeesInTraining[i].name}: ${employeesInTraining[i].training}`);
     }
 }
 
@@ -108,11 +109,11 @@ const scores = [
 for (let i = 0; i < scores.length; i++) {
     if (scores[i].score === 100) {
         console.log("6%");
-    } else if (scores[i].score >= 90) {
+    } else if (scores[i].score >= 90 && scores[i].score < 100) {
         console.log("4%");
-    } else if (scores[i].score >= 70) {
+    } else if (scores[i].score >= 70 && scores[i].score < 90) {
         console.log("3%");
-    } else if (scores[i].score >= 60) {
+    } else if (scores[i].score >= 60 && scores[i].score < 70) {
         console.log("2%");
     } else {
         console.log("0%");
@@ -137,11 +138,11 @@ console.log("-----");
 for (let i = 0; i < scores.length; i++) {
     if (scores[i].score === 100) {
         scores[i].salaryIncrease = "6%";
-    } else if (scores[i].score >= 90) {
+    } else if (scores[i].score >= 90 && scores[i].score < 100) {
         scores[i].salaryIncrease = "4%";
-    } else if (scores[i].score >= 70) {
+    } else if (scores[i].score >= 70 && scores[i].score < 90) {
         scores[i].salaryIncrease = "3%";
-    } else if (scores[i].score >= 60) {
+    } else if (scores[i].score >= 60 && scores[i].score < 70) {
         scores[i].salaryIncrease = "2%";
     } else {
         scores[i].salaryIncrease = "0%";
@@ -194,7 +195,8 @@ const employees = [
 ];
 
 for (let i = 0; i < employees.length; i++) {
-    employees[i].email = employees[i].firstName.toLowerCase() + "." + employees[i].lastName.toLowerCase() + "@loop-it-solutions.nl";
+    employees[i].email = `${employees[i].firstName}.${employees[i].lastName}@loop-it-solutions.nl`;
+    employees[i].email = employees[i].email.toLowerCase();
 }
 
 console.log(employees);

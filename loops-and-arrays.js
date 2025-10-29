@@ -13,8 +13,8 @@
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
-for (i = 0; i < meetingTimes.length; i++) {
-    console.log("Vergadering om " + meetingTimes[i]);
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log(`Vergadering om ${meetingTimes[i]}`);
 }
 
 console.log("-----");
@@ -31,10 +31,11 @@ console.log("-----");
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
 
-for (i = 0; i < salaries.length; i++) {
-    console.log(salaries[i] * 1.05);
+for (let i = 0; i < salaries.length; i++) {
+    salaries[i] = (salaries[i] * 1.05);
 }
 
+console.log(salaries);
 console.log("-----");
 // ==========================================
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
@@ -47,10 +48,11 @@ console.log("-----");
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
 
-for (i = 0; i < birthYears.length; i++) {
-    console.log(2025 - birthYears[i]);
+for (let i = 0; i < birthYears.length; i++) {
+    birthYears[i] = 2025 - birthYears[i];
 }
 
+console.log(birthYears);
 console.log("-----");
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
@@ -64,14 +66,14 @@ console.log("-----");
 
 const leaveHours = [6, 9, 2, 7, 3];
 
-for (i = 0; i < leaveHours.length; i++) {
+for (let i = 0; i < leaveHours.length; i++) {
     if (leaveHours[i] % 2 === 0) {
-        console.log(leaveHours[i] * 2);
+        leaveHours[i] = leaveHours[i] * 2;
     } else {
-        console.log(leaveHours[i] * 0.5);
+        leaveHours[i] = leaveHours[i] * 0.5;
     }
 }
-
+console.log(leaveHours);
 console.log("-----");
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
@@ -88,8 +90,10 @@ console.log("-----");
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
-for (i = 0; i < productionCodes.length; i++) {
-    console.log(productionCodes[i].toUpperCase().trim());
+for (let i = 0; i < productionCodes.length; i++) {
+   productionCodes[i] = productionCodes[i].toUpperCase().trim();
 }
+
+console.log(productionCodes);
 
 

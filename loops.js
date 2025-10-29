@@ -95,12 +95,12 @@ console.log("-----");
 // >> 8
 // >> 9
 // ==========================================
-for (i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     if (i < 3) {
         console.log(i);
-    } else if (i <= 5) {
+    } else if ( i >= 3 && i < 6) {
         console.log("> " + i);
-    } else if (i <= 9) {
+    } else if (i >= 6 && i < 10) {
         console.log(">> " + i);
     }
 }
